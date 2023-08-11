@@ -1,6 +1,6 @@
 import { useReducer } from "react"
 import { BotonBuscar } from "./BotonBuscar"
-export const InputPokemon = () => {
+export const InputPokemon = ({onActionPokemon}) => {
   //Para controlar el valor del input: 
     const [inputValue, dispatch] = useReducer((state = [], action) => {
     switch(action.type) {
@@ -13,6 +13,14 @@ export const InputPokemon = () => {
     }
     });
 
+    const  apiPokemonDumy = () => {
+        return {
+            id: 1, 
+            name: inputValue,
+            image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'
+        }
+    } 
+    
     const handleInputChnage = ({target}) => {
         dispatch({
             type: 'Change_Input',
@@ -22,15 +30,18 @@ export const InputPokemon = () => {
   
     const handleSubmit = (event) => {
         event.preventDefault()
+        onActionPokemon(apiPokemonDumy(inputValue))
     }  
-return (
-  <form onSubmit={handleSubmit}>
-    <input type="text" 
-    placeholder="Buscar Pokemon"
-    value={inputValue}
-    onChange={handleInputChnage}
-    /> 
-    <BotonBuscar />
-  </form>  
- )
+   
+   
+    return (
+    <form onSubmit={handleSubmit}>
+        <input type="text" 
+        placeholder="Buscar Pokemon"
+        value={inputValue}
+        onChange={handleInputChnage}
+        /> 
+        <BotonBuscar />
+    </form>  
+    )
 }

@@ -1,5 +1,5 @@
-export const BotonEliminar = () => {
+export const BotonEliminar = ({onDeletePokemon}) => {
   return (
-    <button>Eliminar Pokemon</button>
+    <button onClick={onDeletePokemon}>Eliminar Pokemon</button>
   )
 }

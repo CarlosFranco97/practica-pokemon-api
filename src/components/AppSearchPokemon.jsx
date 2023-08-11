@@ -2,19 +2,29 @@ import { PokemonItem } from './PokemonItem'
 import { TituloPokeApi } from './TituloPokeApi'
 import {BotonEliminar} from './BotonEliminar'
 import {InputPokemon} from './InputPokemon'
+import { useState } from 'react'
 export const AppSearchPokemon = () => {
   const tituloPokeApi = 'PokeApi'
-  const pokemonUrl = {
-   id: 1,
-   name: 'pikachu',
-   image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'
-  }
+  const [pokemonUrl, setPokemonUrl] = useState([])
+    const handleActionPokemon = (pokemonObject) => {
+    setPokemonUrl(pokemonObject)
+    }; 
+    
+    const handleDeletePokemon = () => {
+    setPokemonUrl(null)
+    };
+
   return (
     <>
       <TituloPokeApi titulo={tituloPokeApi}/>
-      <InputPokemon />
+      <InputPokemon onActionPokemon={handleActionPokemon}/>
+    
       <PokemonItem url={pokemonUrl}/>
-      <BotonEliminar />
+    
+      { (pokemonUrl) ?
+        <BotonEliminar  onDeletePokemon={handleDeletePokemon}/>
+        :null
+      }
     </>
     )
 }
