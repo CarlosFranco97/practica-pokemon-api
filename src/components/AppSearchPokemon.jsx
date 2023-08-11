@@ -1,6 +1,6 @@
 import { PokemonItem } from "./PokemonItem"
 import { TituloPokeApi } from "./TituloPokeApi"
-
+import {BotonEliminar} from './BotonEliminar'
 export const AppSearchPokemon = () => {
   const tituloPokeApi = 'PokeApi'
   const pokemonUrl = {
@@ -12,6 +12,7 @@ export const AppSearchPokemon = () => {
     <>
       <TituloPokeApi titulo={tituloPokeApi}/>
       <PokemonItem url={pokemonUrl}/>
+      <BotonEliminar />
     </>
     )
 }
