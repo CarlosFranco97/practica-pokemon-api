@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {AppSearchPokemon} from './AppSearchPokemon'
+import {AppSearchPokemon} from './components/AppSearchPokemon'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
