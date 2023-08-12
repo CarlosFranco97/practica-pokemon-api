@@ -13,14 +13,6 @@ export const InputPokemon = ({onActionPokemon}) => {
     return state
     }
     });
-
-    // const  apiPokemonDumy = () => {
-    //     return {
-    //         id: 1, 
-    //         name: inputValue,
-    //         image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'
-    //     }
-    // } 
     
     const handleInputChnage = ({target}) => {
         dispatch({
@@ -53,6 +45,9 @@ export const InputPokemon = ({onActionPokemon}) => {
         placeholder="Buscar Pokemon"
         value={inputValue}
         onChange={handleInputChnage}
+        className="py-3 px-4 block w-full border-white-200 rounded-md text-sm 
+        focus:border-white-500 focus:ring-white-500 white:bg-slate-900 white:border-gray-700 
+        dark:text-gray-400 mt-4"
         /> 
         <BotonBuscar />
     </form>  
