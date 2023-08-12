@@ -7,7 +7,7 @@ export const AppSearchPokemon = () => {
   const tituloPokeApi = 'PokeApi'
   const [pokemonUrl, setPokemonUrl] = useState([])
     const handleActionPokemon = (pokemonObject) => {
-    setPokemonUrl(pokemonObject)
+    setPokemonUrl(pokemonObject);
     }; 
     
     const handleDeletePokemon = () => {
@@ -19,8 +19,10 @@ export const AppSearchPokemon = () => {
       <TituloPokeApi titulo={tituloPokeApi}/>
       <InputPokemon onActionPokemon={handleActionPokemon}/>
     
-      <PokemonItem url={pokemonUrl}/>
-    
+      { (pokemonUrl) ?
+        <PokemonItem url={pokemonUrl}/>
+        : <em>Pokemon no encontrado</em>
+      }
       { (pokemonUrl) ?
         <BotonEliminar  onDeletePokemon={handleDeletePokemon}/>
         :null
@@ -28,3 +30,5 @@ export const AppSearchPokemon = () => {
     </>
     )
 }
+
+  
