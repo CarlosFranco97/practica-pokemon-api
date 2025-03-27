@@ -1,10 +1,10 @@
-## Proyecto: Práctica - Pokémon API
+# Proyecto: Práctica - Pokémon API
 
-# Descripción
+## Descripción
 
 Este proyecto es una aplicación desarrollada en React que permite buscar y mostrar información de Pokémon utilizando la Pokémon API. Se hace uso de hooks personalizados, como useFetch, para manejar las peticiones HTTP de manera eficiente. Además, se ha estilizado la interfaz con Tailwind CSS para un diseño moderno. Actualmente, la aplicación no es completamente responsiva, por lo que se planea mejorar su adaptación a dispositivos móviles en futuras actualizaciones.
 
-# Tecnologías utilizadas
+## Tecnologías utilizadas
 
 React: Librería para la construcción de interfaces de usuario.
 
@@ -14,7 +14,7 @@ Tailwind CSS: Framework de CSS para el diseño estilizado.
 
 Pokémon API: API pública para obtener información sobre Pokémons.
 
-# Características principales
+## Características principales
 
 Búsqueda de Pokémons por nombre.
 
