@@ -1,8 +1,8 @@
-import { PokemonItem } from './PokemonItem'
-import { TituloPokeApi } from './TituloPokeApi'
-import {InputPokemon} from './InputPokemon'
-import { useState } from 'react'
-import { BotonEliminar } from './BotonEliminar'
+import { PokemonItem } from './components/PokemonItem';
+import { TituloPokeApi } from './components/TituloPokeApi';
+import {InputPokemon} from './components/InputPokemon';
+import { useState } from 'react';
+import { BotonEliminar } from './components/BotonEliminar';
 export const AppSearchPokemon = () => {
   const tituloPokeApi = 'PokeApi'
   const [pokemonUrl, setPokemonUrl] = useState()
